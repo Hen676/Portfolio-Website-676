@@ -1,35 +1,32 @@
 :root {
-	--color-navy: rgb(0,0,68);
-	--color-dark-navy:rgb(0, 0, 39);
-	--color-dark-green: rgb(16,43,31);
-	--color-gray: rgb(91,91,91);
-	--color-light-gray: rgb(172,189,186);
-	--color-light-gray-1: rgb(139, 155, 152);
-	--color-light-blue: rgb(225, 247, 247);
-	--color-light-gray-opa: rgba(255, 255, 255, 0.3);
-	--color-dark-gray-opa: rgba(5, 5, 5, 0.3);
-	--color-grad-1: #4158D0;
-	--color-grad-2: #C850C0;
-	--color-grad-3: #FFCC70;
 
-	--color-grad-1-dark: #091447;
-	--color-grad-2-dark: #3f0c3c;
-	--color-grad-3-dark: #553c0e;
+	--color-dark-background: #161616;
+	--color-dark-foreground: #222222;
+	--color-dark-foreground-opa: #2425254d;
+	--color-dark-text-highlight: #ebeae9;
+	--color-dark-text: #d6d5d5;
+
+	--color-light-background: #ffffff;
+	--color-light-foreground: #f1f1f1;
+	--color-light-foreground-opa: #f1f1f14d;
+	--color-light-text-highlight: #322746;
+	--color-light-text: rgb(56, 56, 56);
+
+	--color-gray-opa: #ffffff4d;
+
+	--color-highlight-1: #4158D0;
+	--color-highlight-2: #C850C0;
+	--color-highlight-3: #FFCC70;
 
 	--gradient: linear-gradient(
 		43deg, 
-		var(--color-grad-1) 0%, 
-		var(--color-grad-2) 46%, 
-		var(--color-grad-3) 100%);
-	--gradient-dark: linear-gradient(
-		43deg, 
-		var(--color-grad-1-dark) 0%, 
-		var(--color-grad-2-dark) 46%, 
-		var(--color-grad-3-dark) 100%);
+		var(--color-highlight-1) 0%, 
+		var(--color-highlight-2) 46%, 
+		var(--color-highlight-3) 100%);
 
-	--shadow-main: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+	--shadow-light-main: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
 	0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	--shadow-hover: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 
+	--shadow-light-hover: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 
 	0 8px 30px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -47,27 +44,48 @@
 	background: var(--color-gray);
 }
 
-/* Dark mode */
-.dark {
-	background-image: linear-gradient(var(--color-dark-navy), rgb(36, 36, 36));
-}
-
-.dark header {
-	background-image: var(--gradient-dark);
-}
-
-.dark .content {
-	background-color: var(--color-dark-gray-opa);
+/* Dark mode - Text */
+.dark h1 {
+	color: var(--color-dark-text-highlight);
 }
 
 .dark p,
-.dark ul,
-.dark h1 {
-	color: var(--color-light-blue);
+.dark ul {
+	color: var(--color-dark-text);
+}
+
+.dark hr {
+	background-color: var(--color-dark-text);
+}
+
+/* Dark mode - Background */
+.dark {
+	background-color: var(--color-dark-background);
+}
+
+.dark .content {
+	background-color: var(--color-dark-foreground-opa);
 }
 
 .dark .codeSection {
-	background-color:rgb(36, 36, 36);
+	background-color: var(--color-dark-foreground);
+}
+
+/* Dark mode - Icon */
+.dark .icon-simple {
+	background-color: var(--color-dark-background);
+	color: var(--color-highlight-3);
+}
+
+.dark .icon-simple:focus,
+.dark .icon-simple:hover {
+	background-color: var(--color-highlight-3);
+	color: var(--color-dark-background);
+}
+
+.dark .tooltipText {
+	background-color: var(--color-highlight-3);
+	color: var(--color-dark-foreground);
 }
 
 /*
@@ -75,8 +93,8 @@
 */
 
 body {
-	background-color: var(--color-light-gray);
-	background-image: linear-gradient(var(--color-light-gray), var(--color-light-gray-1));
+	transition: background-color 0.3s linear;
+	background-color: var(--color-light-background);
 	font-family: verdana;
 	padding-bottom: 100px;
 	max-width: 1400px;
@@ -91,8 +109,8 @@ body {
 }
 
 header {
-	box-shadow: var(--shadow-main);
-	background-color: var(--color-grad-1);
+	box-shadow: var(--shadow-light-main);
+	background-color: var(--color-highlight-1);
 	background-image: var(--gradient);
 	background-size: 200%;
 	animation: bg-animation 5s infinite alternate;
@@ -116,7 +134,7 @@ img {
 hr {
     border: none;
     height: 1px;
-    background-color: var(--color-gray);
+    background-color: var(--color-light-text);
 	margin-bottom: 20px;
 }
 
@@ -125,13 +143,21 @@ hr {
 */
 
 h1 {
-	color: var(--color-navy);
+	color: var(--color-light-text-highlight);
 	margin:0;
 }
 
 p,
 ul {
-	color: var(--color-gray);
+	color: var(--color-light-text);
+}
+
+a {
+	color: var(--color-highlight-2);
+}
+
+a:focus {
+	color: var(--color-highlight-1);
 }
 
 ul {
@@ -142,6 +168,29 @@ ul {
 /*
 	Icon Buttons
 */
+
+.icon-simple {
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background-color: var(--color-light-foreground);
+	color: var(--color-highlight-1);
+	transition: background-color 0.5s linear;
+	box-shadow: var(--shadow-light-main);
+}
+
+.icon-simple:hover,
+.icon-simple:focus {
+	background-color: var(--color-highlight-1);
+	box-shadow: var(--shadow-light-hover);
+	color: var(--color-light-foreground);
+	cursor: pointer;
+	opacity: 1;
+}
 
 .icon-list {
 	margin: 0;
@@ -157,10 +206,14 @@ ul {
 	margin: 0 0.7em;
 }
 
+/*
+	Header
+*/
+
 header p,
 header h1 {
 	font-size: x-large;
-	color: var(--color-navy);
+	color: var(--color-light-text-highlight);
 }
 
 .center {
@@ -168,9 +221,10 @@ header h1 {
 }
 
 .content {
+	transition: background-color 0.3s linear;
 	padding: 20px 0;
 	text-align: center;
-	background-color: var(--color-light-gray-opa);
+	background-color: var(--color-light-foreground-opa);
 }
 
 /*
@@ -194,11 +248,12 @@ header h1 {
 }
 
 .codeSection {
-	box-shadow: var(--shadow-main);
-	margin-top:30px;
-	margin-bottom:30px;
+	transition: background-color 0.3s linear;
+	box-shadow: var(--shadow-light-main);
+	margin-top: 30px;
+	margin-bottom: 30px;
 	overflow: visible;
-	background-color:white;
+	background-color:var(--color-light-foreground);
 	padding:20px;
 }
 
@@ -249,12 +304,12 @@ header h1 {
 	right: 0;
 	margin: auto;
 	opacity: 0.7;
-	box-shadow: var(--shadow-main);
+	box-shadow: var(--shadow-light-main);
 }
 
 .imageSection div img:hover,
 .imageSection div img:focus {
-	box-shadow: var(--shadow-hover);
+	box-shadow: var(--shadow-light-hover);
 	opacity: 1;
 }
 
@@ -266,29 +321,6 @@ header h1 {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-}
-
-.icon-simple {
-	text-decoration: none;
-	display: flex;
-	justify-content: center;
-    align-items: center;
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	background-color: white;
-	color: var(--color-navy);
-	transition: background-color 0.5s linear;
-	box-shadow: var(--shadow-main);
-}
-
-.icon-simple:hover,
-.icon-simple:focus {
-	background-color: var(--color-navy);
-	box-shadow: var(--shadow-hover);
-	color: white;
-	cursor: pointer;
-	opacity: 1;
 }
 
 /*
@@ -306,7 +338,7 @@ header h1 {
 	height: 100%;
 	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: var(--color-gray-opa);
 }
 
 #imgModal {
@@ -314,14 +346,14 @@ header h1 {
 	display: block;
 	max-height: 70%;
 	max-width: 70%;
-	box-shadow: var(--shadow-main);
+	box-shadow: var(--shadow-light-main);
 }
 
 #captionModal {
-	background-color: var(--color-light-gray-opa);
+	background-color: var(--color-light-foreground-opa);
 	margin: 20px auto;
 	text-align: center;
-	color: var(--color-navy);
+	color: var(--color-light-text-highlight);
 	padding: 10px 0;
 }
 
@@ -352,16 +384,16 @@ header h1 {
 	position: relative;
 }
 
-.tooltip .tooltipText {
+.tooltipText {
 	opacity: 0;
 	width: 100px;
-	background-color: var(--color-navy);
-	color: #fff;
+	background-color: var(--color-highlight-1);
+	color: var(--color-light-foreground);
 	text-align: center;
 	border-radius: 6px;
 	padding: 5px 0;
 	transition: opacity 0.5s ease;
-	box-shadow: var(--shadow-hover);
+	box-shadow: var(--shadow-light-hover);
 
 	/* Position the tooltip */
 	position: absolute;
