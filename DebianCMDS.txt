@@ -1,1 +1,0 @@
-unzip filename.zip -d /path/to/directory
