@@ -98,7 +98,6 @@ body {
 	font-family: verdana;
 	padding-bottom: 100px;
 	max-width: 1400px;
-	min-width: 450px;
 	margin: auto;
 }
 
@@ -287,8 +286,9 @@ header h1 {
 }
 
 .imageSection div {
-	width: 20%;
-	height: 200px;
+	width: 45%;
+	height: 250px;
+	margin: 15px;
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
@@ -306,14 +306,14 @@ header h1 {
 	left: 0;
 	right: 0;
 	margin: auto;
-	opacity: 0.7;
+	opacity: 1;
 	box-shadow: var(--shadow-light-main);
 }
 
 .imageSection div img:hover,
 .imageSection div img:focus {
 	box-shadow: var(--shadow-light-hover);
-	opacity: 1;
+	opacity: 0.7;
 }
 
 /*
@@ -425,6 +425,9 @@ header h1 {
 	.codeSection .icon-list {
 		float: none;
 		padding-bottom: 20px;
+	}
+	.imageSection div {
+		width: 85%;
 	}
 }
 
