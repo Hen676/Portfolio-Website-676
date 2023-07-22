@@ -1,350 +1,358 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="CSS/Main.css">
-		<title>&#60;Henry Timms /&#62;</title>
-		<link rel="shortcut icon" type="image/png" href="Data/favicon676.png"/>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<script src="https://kit.fontawesome.com/e09760bf9f.js" crossorigin="anonymous"></script>
-	</head>
-	<body id="body">
-		<div class="main">
-			<header class="header">
-				<div class="content">
-					<h1>Henry Timms</h1>
-					<br><br>
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://www.linkedin.com/in/henry-timms-78336a188/">
-								<i class="fa fa-linkedin fa-xl"></i>
-							</a>
-							<span class="tooltipText">Linkedin</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676">
-								<i class="fa fa-github fa-xl"></i>
-							</a>
-							<span class="tooltipText">GitHub</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" id="darkMode">
-								<i class="fa-solid fa-moon"></i>
-							</a>
-							<span class="tooltipText">Dark Mode</span>
-						</li>
-					</ul>
-				</div>
-			</header>
 
-			<section>
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://avaloniaui.net/">
-								<i class="fa fa-cubes fa-xl"></i>
-							</a>
-							<span class="tooltipText">AvaloniaUI</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/EVTCLogUploader.NET">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<img class="logo" src="Data/logo_log.png"/>
-					<div>
-						<h1>// EVTCLogUploader.NET</h1>
-						<div class="language">
-							<p>C#</p>
-							<p>.NET 6.0</p>
-							<p>AvaloniaUI</p>
-							<p>SQLite</p>
-							<p style="opacity: 30%">CSV</p>
-						</div>
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+	<title>&#60;Henry Timms /&#62;</title>
+	<link rel="shortcut icon" type="image/png" href="Data/favicon676.png" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://kit.fontawesome.com/e09760bf9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+	<div class="main">
+		<header class="header">
+			<div class="content">
+				<h1>Henry Timms</h1>
+				<br><br>
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://www.linkedin.com/in/henry-timms-78336a188/">
+							<i class="fa fa-linkedin fa-xl"></i>
+						</a>
+						<span class="tooltipText">Linkedin</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676">
+							<i class="fa fa-github fa-xl"></i>
+						</a>
+						<span class="tooltipText">GitHub</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" id="darkMode">
+							<i class="fa-solid fa-moon"></i>
+						</a>
+						<span class="tooltipText">Dark Mode</span>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<section>
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://avaloniaui.net/">
+							<i class="fa fa-cubes fa-xl"></i>
+						</a>
+						<span class="tooltipText">AvaloniaUI</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/EVTCLogUploader.NET">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<img class="logo" src="Data/logo_log.png" />
+				<div>
+					<h1>// EVTCLogUploader.NET</h1>
+					<div class="language">
+						<p>C#</p>
+						<p>.NET 6.0</p>
+						<p>AvaloniaUI</p>
+						<p>SQLite</p>
+						<p style="opacity: 30%">CSV</p>
 					</div>
-					<hr>
-					<p>C# desktop application for managing and uploading [.evtc], [.zevtc] and [.evtc.zip] files. 
-						Files are read by binary file reader.
-						Read files can be uploaded to <a href="https://dps.report/">dps.report</a>. 
-						Uploaded files will return formatted message copyied to the users clipboard.
-					</p>
-					<br>
-					<p> Filters:
-						<ul>
-							<li>Date / Time</li>
-							<li>Encounter</li>
-							<dd>Strikes, Raids and Fractels</dd>
-							<li>Character Profession</li>
-							<li>File Type</li>
-						</ul>
-					</p>
-					<br>
-					<p> Languages:
-						<ul>
-							<li>English</li>
-							<li>Polish</li>
-							<li>French</li>
-							<li>German</li>
-							<li>Italian</li>
-							<li>Brazilian Portuguese</li>
-						</ul>
-					</p>
-					<hr>
-					<p>		
-						File locations are stored in a local SQLite database. Application used to store file locations in a CSV.
-					</p>					
 				</div>
-				<div class="imageSection">
-					<div><img src="Data/log1.png" alt="Desktop application in light mode"/></div>
-					<div><img src="Data/log2.gif" alt="Gif showcasing filtering system"/></div>
-					<div><img src="Data/log3.png" alt="Desktop application in dark mode, in Polish"/></div>
-				</div>
+				<hr>
+				<p>C# desktop application for managing and uploading [.evtc], [.zevtc] and [.evtc.zip] files.
+					Files are read by binary file reader.
+					Read files can be uploaded to <a href="https://dps.report/">dps.report</a>.
+					Uploaded files will return formatted message copyied to the users clipboard.
+				</p>
+				<br>
+				<p> Filters:
+				<ul>
+					<li>Date / Time</li>
+					<li>Encounter</li>
+					<dd>Strikes, Raids and Fractels</dd>
+					<li>Character Profession</li>
+					<li>File Type</li>
+				</ul>
+				</p>
+				<br>
+				<p> Languages:
+				<ul>
+					<li>English</li>
+					<li>Polish</li>
+					<li>French</li>
+					<li>German</li>
+					<li>Italian</li>
+					<li>Brazilian Portuguese</li>
+				</ul>
+				</p>
+				<hr>
+				<p>
+					File locations are stored in a local SQLite database. Application used to store file locations in a
+					CSV.
+				</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/log1.png" alt="Desktop application in light mode" /></div>
+				<div><img src="Data/log2.gif" alt="Gif showcasing filtering system" /></div>
+				<div><img src="Data/log3.png" alt="Desktop application in dark mode, in Polish" /></div>
+			</div>
 
 
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://discordnet.dev/index.html">
-								<i class="fa fa-cubes fa-xl"></i>
-							</a>
-							<span class="tooltipText">Discord.NET</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/FadedDiscordBot.NET">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/FadedDiscordBot.PY">
-								<i class="fa fa-box-archive fa-xl"></i>
-							</a>
-							<span class="tooltipText">Archive</span>
-						</li>
-					</ul>
-					<img class="logo" src="Data/logo_bot.png"/>
-					<div>
-						<h1>// FadedDiscordBot.NET</h1>
-						<div class="language">
-							<p>C#</p>
-							<p>.NET 6.0</p>
-							<p>Discord.NET</p>
-							<p style="opacity: 30%">Python</p>
-							<p style="opacity: 30%">Discord.py</p>
-						</div>
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://discordnet.dev/index.html">
+							<i class="fa fa-cubes fa-xl"></i>
+						</a>
+						<span class="tooltipText">Discord.NET</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/FadedDiscordBot.NET">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/FadedDiscordBot.PY">
+							<i class="fa fa-box-archive fa-xl"></i>
+						</a>
+						<span class="tooltipText">Archive</span>
+					</li>
+				</ul>
+				<img class="logo" src="Data/logo_bot.png" />
+				<div>
+					<h1>// FadedDiscordBot.NET</h1>
+					<div class="language">
+						<p>C#</p>
+						<p>.NET 6.0</p>
+						<p>Discord.NET</p>
+						<p style="opacity: 30%">Python</p>
+						<p style="opacity: 30%">Discord.py</p>
 					</div>
-					<hr>
-					<p>Discord bot created for a community I run. 
-						Bot uses Guild Wars 2 API to add integration with the main game of the community.
-					</p>
-					<br>
-					<ul>
-						<li>Autorole</li>
-						<dd>Automatically assigns a user a role upon joining the server</dd>
-    	                <li>Reactrole</li>
-						<dd>Allows users to self-assign roles upon reacting to a message. 
-							Message can be customized. Reaction control is present limiting the possible reactions.</dd>
-    	            	<li>Motd</li>
-						<dd>Syncs a message in desired channel to the Message of the Day from the game.</dd>
-    	                <li>Raid</li>
-						<dd>Weekly message to allow users to vote by reactions on which content they want to play. 
-							Reaction control is present limiting the possible reactions.</dd>
-					</ul>
-					<hr>
-					<p>Bot used to use <a href="https://github.com/Hen676/FadedDiscordBot.PY">Python with Discord.py</a> but has been converted to C# with Discord.NET.</p>				
 				</div>
-				<div class="imageSection">
-					<div><img src="Data/bot1.png" /></div>
-					<div><img src="Data/bot3.png" /></div>
-					<div><img src="Data/bot2.png" /></div>
-				</div>
+				<hr>
+				<p>Discord bot created for a community I run.
+					Bot uses Guild Wars 2 API to add integration with the main game of the community.
+				</p>
+				<br>
+				<ul>
+					<li>Autorole</li>
+					<dd>Automatically assigns a user a role upon joining the server</dd>
+					<li>Reactrole</li>
+					<dd>Allows users to self-assign roles upon reacting to a message.
+						Message can be customized. Reaction control is present limiting the possible reactions.</dd>
+					<li>Motd</li>
+					<dd>Syncs a message in desired channel to the Message of the Day from the game.</dd>
+					<li>Raid</li>
+					<dd>Weekly message to allow users to vote by reactions on which content they want to play.
+						Reaction control is present limiting the possible reactions.</dd>
+				</ul>
+				<hr>
+				<p>Bot used to use <a href="https://github.com/Hen676/FadedDiscordBot.PY">Python with Discord.py</a> but
+					has been converted to C# with Discord.NET.</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/bot1.png" /></div>
+				<div><img src="Data/bot3.png" /></div>
+				<div><img src="Data/bot2.png" /></div>
+			</div>
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://fabricmc.net/">
-								<i class="fa fa-cubes fa-xl"></i>
-							</a>
-							<span class="tooltipText">FabricMC</span>
-						</li>
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/DragonLiteMC">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<img class="logo" src="Data/logo_dlm.png"/>
-					<div>
-						<h1>// Dragon Lite</h1>
-						<div class="language">
-							<p>Java</p>
-							<p>Json</p>
-							<p>FabricMC</p>
-						</div>
-					</div>
-					<hr>
-					<p>Client side FabricMC Minecraft Mod. Adds features listed below. Features can be configured via config file and in-game screen.</p>
-					<br>
-					<ul>
-						<li>Zoom</li>
-						<dd>Zooms in the players perspective.</dd>
-    	                <li>Mob health</li>
-						<dd>Health of nearby entities is displayed above there head.</dd>
-    	                <li>Light-level overlay</li>
-						<dd>Light level of blocks is displayed above there corresponding block.</dd>
-    	                <li>Reduced nether fog</li>
-						<dd>Better visibility in the nether.</dd>
-						<li>Smokey furnaces</li>
-						<dd>Adds additional particles to the furnace.</dd>
-						<li>Compass hud</li>
-						<dd>Adds a head up display for the palyers current position and angle.</dd>
-						<li>Lowered Shield</li>
-						<dd>Better visibility with a shield equipped.</dd>
-					</ul>
-				</div>
-				<div class="imageSection">
-					<div><img src="Data/dlm1.gif" alt="Zoom, compass hud and lowered shield"/></div>
-					<div><img src="Data/dlm2.png" alt="In-game config screen"/></div>
-					<div><img src="Data/dlm3.gif" alt="Light level overlay"/></div>
-				</div>
-
-
-				<div class="codeSection">
-					<h1>// Identify recycling symbols with a Neural Network</h1>
-
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://fabricmc.net/">
+							<i class="fa fa-cubes fa-xl"></i>
+						</a>
+						<span class="tooltipText">FabricMC</span>
+					</li>
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/DragonLiteMC">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<img class="logo" src="Data/logo_dlm.png" />
+				<div>
+					<h1>// Dragon Lite</h1>
 					<div class="language">
 						<p>Java</p>
-						<p>Python</p>
-						<p>OpenCV</p>
+						<p>Json</p>
+						<p>FabricMC</p>
 					</div>
-					<hr>
-					<p>I created a convolutional neural network(CNN) to identify recycling symbols in TensorFlow and python. 
-    	                This was then wrapped into an android app created in Android Studio. 
-    	                OpenCV was used to manipulate and cleans the image for identification. 
-    	                OPRL and RIC could be identified with the CNN</p>						
 				</div>
-				<div class="imageSection">
-					<div><img src="Data/pro1.jpg" /></div>
-					<div><img src="Data/pro2.jpg" /></div>
-					<div><img src="Data/pro3.jpg" /></div>
-				</div>
+				<hr>
+				<p>Client side FabricMC Minecraft Mod. Adds features listed below. Features can be configured via config
+					file and in-game screen.</p>
+				<br>
+				<ul>
+					<li>Zoom</li>
+					<dd>Zooms in the players perspective.</dd>
+					<li>Mob health</li>
+					<dd>Health of nearby entities is displayed above there head.</dd>
+					<li>Light-level overlay</li>
+					<dd>Light level of blocks is displayed above there corresponding block.</dd>
+					<li>Reduced nether fog</li>
+					<dd>Better visibility in the nether.</dd>
+					<li>Smokey furnaces</li>
+					<dd>Adds additional particles to the furnace.</dd>
+					<li>Compass hud</li>
+					<dd>Adds a head up display for the palyers current position and angle.</dd>
+					<li>Lowered Shield</li>
+					<dd>Better visibility with a shield equipped.</dd>
+				</ul>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/dlm1.gif" alt="Zoom, compass hud and lowered shield" /></div>
+				<div><img src="Data/dlm2.png" alt="In-game config screen" /></div>
+				<div><img src="Data/dlm3.gif" alt="Light level overlay" /></div>
+			</div>
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/Parallel_computing">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<h1>// Parallel Computing</h1>
-					<div class="language">
-						<p>C++</p>
-						<p>C</p>
-						<p>OpenCL</p>
-					</div>
-					<hr>
-					<p>I used OpenCL to create a kernel to find Min, Max, Avg and standard deviation on a large dataset. 
-						The algorithm in use had had improvements like using local memory and sequential addressing.</p>
-				</div>
-				<div class="imageSection">
-					<div><img src="Data/par1.png" /></div>
-					<div><img src="Data/par2.png" /></div>
-					<div><img src="Data/par3.png" /></div>
-				</div>
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/Cross_Platform">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<h1>// Cross Platform</h1>
-					<div class="language">
-						<p>HTML5</p>
-						<p>CSS3</p>
-						<p>Javascript</p>
-						<p>jQuery</p>
-					</div>
-					<hr>
-					<p>This app that allows users to check your local area to find local cinemas and see their reviews. 
-						It also allows you to see current release movies using a movie database. 
-						The app is built using jQuery for mobile support. 
-						It also uses google and movie database API for the map and movie integration.</p>
-				</div>
-				<div class="imageSection">
-					<div><img src="Data/cross1.jpg" /></div>
-					<div><img src="Data/cross2.jpg" /></div>
-					<div><img src="Data/cross3.jpg" /></div>
-					<div><img src="Data/cross4.jpg" /></div>
-				</div>
+			<div class="codeSection">
+				<h1>// Identify recycling symbols with a Neural Network</h1>
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/Image_processing">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<h1>// Image Processing</h1>
-					<div class="language">
-						<p>MATLAB</p>
-					</div>
-					<hr>
-					<p>This project manipulated images using MATLAB. This includes - Interpolation, Neighbourhood Processing, Object Recognition, Shape Description.</p>
+				<div class="language">
+					<p>Java</p>
+					<p>Python</p>
+					<p>OpenCV</p>
 				</div>
-				<div class="imageSection">
-					<div><img src="Data/image1.png" /></div>
-					<div><img src="Data/image2.png" /></div>
-					<div><img src="Data/image3.png" /></div>
-				</div>
+				<hr>
+				<p>I created a convolutional neural network(CNN) to identify recycling symbols in TensorFlow and python.
+					This was then wrapped into an android app created in Android Studio.
+					OpenCV was used to manipulate and cleans the image for identification.
+					OPRL and RIC could be identified with the CNN</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/pro1.jpg" /></div>
+				<div><img src="Data/pro2.jpg" /></div>
+				<div><img src="Data/pro3.jpg" /></div>
+			</div>
 
-				<div class="codeSection">
-					<ul class="icon-list">
-						<li class="tooltip">
-							<a class="icon-simple" href="https://github.com/Hen676/Misc">
-								<i class="fa fa-code fa-xl"></i>
-							</a>
-							<span class="tooltipText">Code</span>
-						</li>
-					</ul>
-					<h1>// Misc</h1>
-					<div class="language">
-						<p>C++</p>
-						<p>SQL</p>
-						<p>Python</p>
-					</div>
-					<hr>
-					<p>Random assortment of scripts and programs. This includes SQL Database, C++ Image manipulation, Python ROS script and other random assortment of programs</p>
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/Parallel_computing">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<h1>// Parallel Computing</h1>
+				<div class="language">
+					<p>C++</p>
+					<p>C</p>
+					<p>OpenCL</p>
 				</div>
-				<div class="imageSection">
-					<div><img src="Data/msc1.png" /></div>
-					<div><img src="Data/msc2.png" /></div>
-					<div><img src="Data/msc3.png" /></div>
-				</div>
-			</section>
+				<hr>
+				<p>I used OpenCL to create a kernel to find Min, Max, Avg and standard deviation on a large dataset.
+					The algorithm in use had had improvements like using local memory and sequential addressing.</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/par1.png" /></div>
+				<div><img src="Data/par2.png" /></div>
+				<div><img src="Data/par3.png" /></div>
+			</div>
 
-			<span id="topArrow" class="icon-simple">
-				<i class="fa-solid fa-angle-up fa-2xl"></i>
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/Cross_Platform">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<h1>// Cross Platform</h1>
+				<div class="language">
+					<p>HTML5</p>
+					<p>CSS3</p>
+					<p>Javascript</p>
+					<p>jQuery</p>
+				</div>
+				<hr>
+				<p>This app that allows users to check your local area to find local cinemas and see their reviews.
+					It also allows you to see current release movies using a movie database.
+					The app is built using jQuery for mobile support.
+					It also uses google and movie database API for the map and movie integration.</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/cross1.jpg" /></div>
+				<div><img src="Data/cross2.jpg" /></div>
+				<div><img src="Data/cross3.jpg" /></div>
+				<div><img src="Data/cross4.jpg" /></div>
+			</div>
+
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/Image_processing">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<h1>// Image Processing</h1>
+				<div class="language">
+					<p>MATLAB</p>
+				</div>
+				<hr>
+				<p>This project manipulated images using MATLAB. This includes - Interpolation, Neighbourhood
+					Processing, Object Recognition, Shape Description.</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/image1.png" /></div>
+				<div><img src="Data/image2.png" /></div>
+				<div><img src="Data/image3.png" /></div>
+			</div>
+
+			<div class="codeSection">
+				<ul class="icon-list">
+					<li class="tooltip">
+						<a class="icon-simple" href="https://github.com/Hen676/Misc">
+							<i class="fa fa-code fa-xl"></i>
+						</a>
+						<span class="tooltipText">Code</span>
+					</li>
+				</ul>
+				<h1>// Misc</h1>
+				<div class="language">
+					<p>C++</p>
+					<p>SQL</p>
+					<p>Python</p>
+				</div>
+				<hr>
+				<p>Random assortment of scripts and programs. This includes SQL Database, C++ Image manipulation, Python
+					ROS script and other random assortment of programs</p>
+			</div>
+			<div class="imageSection">
+				<div><img src="Data/msc1.png" /></div>
+				<div><img src="Data/msc2.png" /></div>
+				<div><img src="Data/msc3.png" /></div>
+			</div>
+		</section>
+
+		<span id="topArrow" class="icon-simple">
+			<i class="fa-solid fa-angle-up fa-2xl"></i>
+		</span>
+
+		<div id="modal">
+			<span id="closeModal" class="icon-simple">
+				<i class="fa-solid fa-close fa-2xl"></i>
 			</span>
-
-			<div id="modal">
-				<span id="closeModal" class="icon-simple">
-					<i class="fa-solid fa-close fa-2xl"></i>
-				</span>
-				<img id="imgModal">
-				<div id="captionModal"></div>
-			</div>	
+			<img id="imgModal">
+			<div id="captionModal"></div>
 		</div>
-		<script src="JavaSkript/Main.js"></script>
-	</body>
+	</div>
+	<script src="JavaSkript/Main.js"></script>
+</body>
+
 </html>
