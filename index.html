@@ -30,9 +30,9 @@
 					</li>
 					<li class="tooltip">
 						<a class="icon-simple" id="darkMode">
-							<i class="fa-solid fa-moon"></i>
+							<i class="fa-solid fa-moon" id="darkModeIcon"></i>
 						</a>
-						<span class="tooltipText">Dark Mode</span>
+						<span class="tooltipText" id="darkModeText">Dark Mode</span>
 					</li>
 				</ul>
 			</div>
@@ -74,11 +74,13 @@
 				<br>
 				<p> Filters:
 				<ul>
-					<li>Date / Time</li>
-					<li>Encounter</li>
-					<dd>Strikes, Raids and Fractels</dd>
-					<li>Character Profession</li>
-					<li>File Type</li>
+					<li>Date and Time</li>
+					<li>Encounters</li>
+					<ul style="list-style-type: circle">
+						<li>Strikes, Raids and Fractels</li>
+					</ul>
+					<li>Character Professions</li>
+					<li>File Types</li>
 				</ul>
 				</p>
 				<br>
@@ -145,15 +147,23 @@
 				<br>
 				<ul>
 					<li>Autorole</li>
-					<dd>Automatically assigns a user a role upon joining the server</dd>
+					<ul style="list-style-type: circle">
+						<li>Automatically assigns a user a role upon joining the server</li>
+					</ul>
 					<li>Reactrole</li>
-					<dd>Allows users to self-assign roles upon reacting to a message.
-						Message can be customized. Reaction control is present limiting the possible reactions.</dd>
+					<ul style="list-style-type: circle">
+					<li>Allows users to self-assign roles upon reacting to a message.
+						Message can be customized. Reaction control is present limiting the possible reactions.</li>
+					</ul>
 					<li>Motd</li>
-					<dd>Syncs a message in desired channel to the Message of the Day from the game.</dd>
+					<ul style="list-style-type: circle">
+						<li>Syncs a message in desired channel to the Message of the Day from the game.</li>
+					</ul>
 					<li>Raid</li>
-					<dd>Weekly message to allow users to vote by reactions on which content they want to play.
-						Reaction control is present limiting the possible reactions.</dd>
+					<ul style="list-style-type: circle">
+						<li>Weekly message to allow users to vote by reactions on which content they want to play.
+							Reaction control is present limiting the possible reactions.</li>
+					</ul>
 				</ul>
 				<hr>
 				<p>Bot used to use <a href="https://github.com/Hen676/FadedDiscordBot.PY">Python with Discord.py</a> but
@@ -195,19 +205,43 @@
 				<br>
 				<ul>
 					<li>Zoom</li>
-					<dd>Zooms in the players perspective.</dd>
+					<ul style="list-style-type: circle">
+						<li>Zooms in the players perspective</li>
+						<li>Customizable Zoom level and keybinding</li>
+					</ul>
 					<li>Mob health</li>
-					<dd>Health of nearby entities is displayed above there head.</dd>
+					<ul style="list-style-type: circle">
+						<li>Health of nearby entities is displayed above there head</li>
+						<li>Health is displayed as a percentage</li>
+						<li>Color of the percentage changes depending on the mobs health</li>
+						<li>Customizable keybinding</li>
+					</ul>
 					<li>Light-level overlay</li>
-					<dd>Light level of blocks is displayed above there corresponding block.</dd>
-					<li>Reduced nether fog</li>
-					<dd>Better visibility in the nether.</dd>
+					<ul style="list-style-type: circle">
+						<li>If the light level of blocks is zero a square is rendered above the corresponding block</li>
+						<li>Can change color and opacity via the config</li>
+						<li>Customizable keybinding</li>
+					</ul>
+					<li>Remove Nether fog</li>
+					<ul style="list-style-type: circle">
+						<li>Better visibility in the nether</li>
+						<li>Can be turned off via the config</li>
+					</ul>
 					<li>Smokey furnaces</li>
-					<dd>Adds additional particles to the furnace.</dd>
+					<ul style="list-style-type: circle">
+						<li>Adds additional particles to the furnace</li>
+						<li>Can be turned off via the config</li>
+					</ul>
 					<li>Compass hud</li>
-					<dd>Adds a head up display for the palyers current position and angle.</dd>
+					<ul style="list-style-type: circle">
+						<li>Adds a head up display for the players current position and angle</li>
+						<li>Can change color and position on the HUD via the config</li>
+						<li>Can be turned off via the config</li>
+					</ul>
 					<li>Lowered Shield</li>
-					<dd>Better visibility with a shield equipped.</dd>
+					<ul style="list-style-type: circle">
+						<li>Better visibility with a shield equipped</li>
+					</ul>
 				</ul>
 			</div>
 			<div class="imageSection">

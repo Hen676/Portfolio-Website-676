@@ -8,7 +8,10 @@ var captionText = document.getElementById("captionModal");
 
 var topArrow = document.getElementById("topArrow");
 var imgSect = document.getElementsByClassName("imageSection");
+
 var darkMode = document.getElementById("darkMode");
+var darkModeIcon = document.getElementById("darkModeIcon");
+var darkModeText = document.getElementById("darkModeText");
 
 var isMobile = mobileCheck();
 
@@ -48,16 +51,28 @@ window.onkeydown = function (event) {
 // Dark mode
 var isStorageAvailable = typeof Storage !== "undefined";
 if (isStorageAvailable) {
-  if (localStorage.getItem("dark") === "true") body.classList.add("dark");
-  else body.classList.remove("dark");
+  if (localStorage.getItem("dark") === "true") {
+    body.classList.add("dark");
+    toggleDarkModeIcon();
+  }
 }
 darkMode.onclick = function () {
   body.classList.toggle("dark");
-  if (isStorageAvailable)
-    localStorage.setItem("dark", body.classList.contains("dark"));
 
-  console.log(localStorage);
+  var darkModeBool = body.classList.contains("dark");
+  toggleDarkModeIcon(darkModeBool);
+
+  if (isStorageAvailable)
+    localStorage.setItem("dark", darkModeBool);
 };
+function toggleDarkModeIcon(toggle = true) {
+  darkModeIcon.classList.toggle("fa-moon");
+  darkModeIcon.classList.toggle("fa-sun");
+  if (toggle)
+    darkModeText.textContent = "Light Mode"
+  else
+    darkModeText.textContent = "Dark Mode"
+}
 
 // Scroll to top arrow
 window.onscroll = function () {
