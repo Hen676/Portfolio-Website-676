@@ -1,0 +1,286 @@
+:root {
+    --color-light-background: #ffffff;
+    --color-light-foreground: #f1f1f1;
+    --color-light-foreground-opa: #f1f1f14d;
+    --color-light-text-highlight: #322746;
+    --color-light-text: rgb(56, 56, 56);    
+    --color-gray-opa: #ffffff4d;    
+    --color-highlight-1: #4158d0;
+    --color-highlight-2: #c850c0;
+    --color-highlight-3: #ffcc70;   
+    --gradient: linear-gradient(
+        43deg,
+        var(--color-highlight-1) 0%,
+        var(--color-highlight-2) 46%,
+        var(--color-highlight-3) 100%
+    );  
+    --shadow-light-main: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --shadow-light-main-drop: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.8));
+    --shadow-light-hover: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
+    --shadow-light-hover-drop: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.8));
+}
+
+/* Animation */
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+/* WEB KIT */
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 17px;
+    background-color: black;
+}
+::-webkit-scrollbar-track {
+    margin: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-opa);
+}
+
+/* Remove number arrows */
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/*
+    Global css
+*/
+body {
+    transition: background-color 0.3s linear;
+    background-color: var(--color-light-background);
+    font-family: verdana;
+    padding-bottom: 100px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+p,
+h1 {
+    color: var(--color-light-text);
+}
+
+.iconSimple {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: var(--color-light-foreground);
+    color: var(--color-highlight-1);
+    transition: background-color 0.5s linear;
+    box-shadow: var(--shadow-light-main);
+}
+
+.iconSimple:hover,
+.iconSimple:focus {
+    background-color: var(--color-highlight-1);
+    box-shadow: var(--shadow-light-hover);
+    color: var(--color-light-foreground);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.iconList {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Settings + Theme buttons
+*/
+.settings {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+}
+
+
+/*
+    Task totals
+*/
+article {
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+article p {
+    display: inline;
+}
+
+/*
+    Task list
+*/
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.task {
+    flex: 1 1 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 5px;
+    background-color: var(--color-light-foreground);
+    box-shadow: var(--shadow-light-main);
+}
+
+.task .iconList {
+    float: right;
+    padding-bottom: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.top p,
+.top h1,
+.bottom p {
+    display: inline;
+    margin: 5px;
+}
+
+
+/*
+	Stopwatch + Form
+*/
+header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    box-shadow: var(--shadow-light-main);
+    background-color: var(--color-highlight-1);
+    background-image: var(--gradient);
+    background-size: 150%;
+    animation: bg-animation 10s linear infinite alternate;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    will-change: background-position;
+}
+
+input {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.5em;
+}
+
+.input {
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: var(--color-highlight-1);
+    color: var(--color-highlight-1);
+    box-shadow: var(--shadow-light-main);
+}
+
+#taskTitle {
+    width: 60%;
+}
+
+#tasks {
+    width: 60%;
+    text-align: center;
+}
+
+.numberInputs {
+    width: 36%;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.numberInputs button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-light-background);
+}
+.numberInputs button i {
+    filter: var(--shadow-light-main-drop);
+}
+.numberInputs button:hover {
+    color: var(--color-highlight-1);
+}
+.numberInputs button:hover i {
+    filter: var(--shadow-light-hover-drop);
+}
+
+#stopWatchTime {
+    display: flex;
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-highlight-1);
+    background-color: var(--color-light-background);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-light-main);
+}
+
+/*
+	Tooltips
+*/
+.tooltip {
+    position: relative;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    margin: 0 0.7em;
+}
+
+.tooltipText {
+    opacity: 0;
+    width: 100px;
+    background-color: var(--color-highlight-1);
+    color: var(--color-light-foreground);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    transition: opacity 0.5s ease;
+    box-shadow: var(--shadow-light-hover);
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 0;
+    bottom: 108%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+}

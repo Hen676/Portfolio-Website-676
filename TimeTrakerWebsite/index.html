@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>&#60;Time Tracker /&#62;</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="shortcut icon" type="image/png" href="Data/LogoTT.png">
+        <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/dark.css'>
+        <script src="https://kit.fontawesome.com/e09760bf9f.js" crossorigin="anonymous"></script>
+		
+		<script defer src='js/darkMode.js'></script>
+        <script defer src='js/timeTask.js'></script>
+        <script defer src='js/main.js'></script>
+    </head>
+    <body id="body">
+        <div class="main">
+            <header>
+                <div class="settings">
+                    <ul class="iconList">
+                        <li class="tooltip">
+                            <a class="iconSimple" id="darkMode">
+                                <i class="fa-solid fa-moon" id="darkModeIcon"></i>
+                            </a>
+                        </li>
+                        <!--
+                        <li class="tooltip">
+                            <a class="iconSimple" id="settings">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+                <form id="createTimeTask">
+                    <input placeholder="Title" type="text" id="taskTitle" class="input"/>
+                    <div class="numberInputs">
+                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input placeholder="Tasks" type="number" id="tasks" class="input" min="1" value="1"/>
+                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <p id="stopWatchTime">00:00:00</p>
+
+                    <ul class="iconList">
+                        <li class="tooltip">
+                            <a class="iconSimple" id="start">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                            <span class="tooltipText">Start</span>
+                        </li>
+                        <li class="tooltip">
+                            <a class="iconSimple" id="pause">
+                                <i class="fa-solid fa-pause"></i>
+                            </a>
+                            <span class="tooltipText">Pause</span>
+                        </li>
+                        <li class="tooltip">
+                            <a class="iconSimple" id="restart">
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                            </a>
+                            <span class="tooltipText">Restart</span>
+                        </li>
+                        <li class="tooltip">
+                            <a class="iconSimple" id="submit">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <span class="tooltipText">Submit</span>
+                        </li>
+                    </ul>
+                </form>
+            </header>
+            <article>
+                <div>
+                    <p>Total time today:</p>
+                    <p id="totalTime">00:00:00</p>
+                </div>
+                <div>
+                    <p>Total tasks today:</p>
+                    <p id="totalTasks">0</p>
+                </div>
+            </article>
+            <section id="taskList">
+                <!--
+                    <div class="task" data-index="${index}">
+                        <div class="top">
+                            <h1>${i.title}</h1>
+                            <p>${i.date}</p>
+                        </div>
+                        <ul class="iconList">
+                            <li class="tooltip">
+                                <a class="iconSimple">
+                                    <i class="fa-solid fa-xmark fa-xl"></i>
+                                </a>
+                                <span class="tooltipText">Delete</span>
+                            </li>
+                        </ul>
+                        <div class="bottom">
+                            <p>Time: ${formatTime(i.time)}</p>
+                            <p>Tasks: ${i.tasks}</p>
+                            <p>Time per task: ${formatTime(i.time / i.tasks)}</p>
+                        </div>
+                    </div>
+                -->
+            </section>
+        </div>
+    </body>
+</html>
