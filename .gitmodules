@@ -1,0 +1,3 @@
+[submodule "TimeTracker-Website"]
+	path = TimeTracker-Website
+	url = https://github.com/Hen676/TimeTracker-Website
